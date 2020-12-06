@@ -51,7 +51,7 @@ else:
 print('[INFO] face detector - NMS threshold = ',nmsThreshold)
 
 # Initialize Vitis-AI/DPU based face detector
-densebox_elf = "/models/dpu_densebox.elf"
+densebox_elf = "models/dpu_densebox.elf"
 densebox_graph = xir.graph.Graph.deserialize(pathlib.Path(densebox_elf))
 densebox_subgraphs = get_subgraph(densebox_graph)
 assert len(densebox_subgraphs) == 1 # only one DPU kernel
